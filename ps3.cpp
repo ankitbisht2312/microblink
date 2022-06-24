@@ -1,22 +1,30 @@
-#include <iostream>
- 
-using namespace std;
- 
-int main()
-{
-    int sale_price, qty, ctr = 0, sum1 = 0, sum2 = 0;
-    cout << "Input Sales Price ";
-    cout << "Sales Quantity:"
-    while (cin >> sale_price >> qty)
-    {
-        sum1 += sale_price * qty;
-        sum2 += qty;
- 
-        ctr++;
-    }
- 
-    cout << "\nTotal of the sales amount and the average of the sales quantity:\n";
-    cout << sum1 << endl << static_cast<int>(static_cast<double>(sum2) / ctr + 0.5) << endl;
- 
-    return 0;
+  void setup() {
+  // put your setup code here, to run once:
+pinMode(13,OUTPUT);
+pinMode(12,OUTPUT);
+pinMode(11,OUTPUT);
+pinMode(10,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(13,HIGH);
+delay(1000);
+digitalWrite(13,LOW);
+delay(1000);
+
+digitalWrite(12,HIGH);
+delay(2000);
+digitalWrite(12,LOW);
+delay(2000);
+
+digitalWrite(11,HIGH);
+delay(500);
+digitalWrite(11,LOW);
+delay(1000);
+
+digitalWrite(10,HIGH);
+delay(1500);
+digitalWrite(10,LOW);
+delay(2000);
 }
